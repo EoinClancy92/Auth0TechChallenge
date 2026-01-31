@@ -33,6 +33,30 @@ const Profile = () => {
           <div className="profile-email" style={{ fontSize: '1.15rem', color: '#a0aec0' }}>
             {user.email}
           </div>
+          {!user.email_verified && (
+            <div style={{ fontSize: '0.95rem', color: '#f56565', marginTop: '0.5rem', fontWeight: '500' }}>
+              ⚠️ Please verify your email address
+              <button 
+                onClick={() => {
+                  // Send verification email
+                  alert('Verification email sent to ' + user.email);
+                }}
+                style={{
+                  marginLeft: '0.5rem',
+                  padding: '0.375rem 0.75rem',
+                  backgroundColor: '#f56565',
+                  color: '#fff',
+                  border: 'none',
+                  borderRadius: '0.375rem',
+                  cursor: 'pointer',
+                  fontSize: '0.85rem',
+                  fontWeight: '600'
+                }}
+              >
+                Send Verification Email
+              </button>
+            </div>
+          )}
         </div>
       </div>
     ) : null
