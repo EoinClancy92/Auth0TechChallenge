@@ -1,5 +1,5 @@
 import LoginButton from './components/LoginButton.tsx';
-import LogoutButton from './components/logoutButton.tsx';
+import LogoutButton from './components/LogoutButton.tsx';
 import Profile from './components/Profile.tsx';
 import { useAuth0 } from '@auth0/auth0-react';
 
