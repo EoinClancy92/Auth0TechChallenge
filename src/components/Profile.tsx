@@ -1,7 +1,9 @@
 import { useAuth0 } from "@auth0/auth0-react";
 
 const Profile = () => {
-  const { user, isAuthenticated, isLoading } = useAuth0();
+  const { user, isAuthenticated, isLoading } = useAuth0(
+    
+  );
 
   if (isLoading) {
     return <div className="loading-text">Loading profile...</div>;
@@ -33,7 +35,7 @@ const Profile = () => {
           <div className="profile-email" style={{ fontSize: '1.15rem', color: '#a0aec0' }}>
             {user.email}
           </div>
-          {!user.email_verified && (
+          {/* {!user.email_verified && (
             <div style={{ fontSize: '0.95rem', color: '#f56565', marginTop: '0.5rem', fontWeight: '500' }}>
               ⚠️ Please verify your email address
               <button 
@@ -56,7 +58,7 @@ const Profile = () => {
                 Send Verification Email
               </button>
             </div>
-          )}
+          )} */}
         </div>
       </div>
     ) : null
